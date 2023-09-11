@@ -98,7 +98,9 @@ def train(config):
             ])
         if task_name == "docvqa":
             model_module.model.decoder.add_special_tokens(["<yes/>", "<no/>"])
-            
+
+        print(task_name)
+        
         for split in ["train", "validation"]:
             datasets[split].append(
                 DonutDataset(
