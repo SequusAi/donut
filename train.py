@@ -91,9 +91,9 @@ def train(config):
         # add categorical special tokens (optional)
         if task_name == "rvlcdip":
             model_module.model.decoder.add_special_tokens([
-                "<client/>", "<compass/>", "<consultants/>", "<drafting_details/>", 
-                "<logo_client/>", "<logo_main_consultant/>", "<logo_secondary_consultant/>", "<map/>", 
-                "<metadata/>", "<notes/>", "<project/>", "<revision_history/>", 
+                "<client/>", "<compass/>", "<consultants/>", "<drafting/>", 
+                "<logo_client/>", "<logo_main/>", "<logo_second/>", "<map/>", 
+                "<metadata/>", "<notes/>", "<project/>", "<revision/>", 
                 "<scale/>", "<status/>", "<title/>"
             ])
         if task_name == "docvqa":
