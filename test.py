@@ -46,12 +46,14 @@ def test(args):
                 prompt=f"<s_{args.task_name}><s_question>{ground_truth['gt_parses'][0]['question'].lower()}</s_question><s_answer>",
             )["predictions"][0]
         else:
+            print("task name",args.task_name)
             output = pretrained_model.inference(image=sample["image"], prompt=f"<s_{args.task_name}>")["predictions"][0]
 
         if args.task_name == "rvlcdip":
             gt = ground_truth["gt_parse"]
-            print(gt)
-            print(output)
+            print("sample",sample)
+            print("gt",gt)
+            print("pred",output)
             score = float(output["class"] == gt["class"])
         elif args.task_name == "docvqa":
             # Note: we evaluated the model on the official website.
