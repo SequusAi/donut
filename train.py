@@ -92,7 +92,7 @@ def train(config):
         if task_name == "rvlcdip":
             model_module.model.decoder.add_special_tokens([
                 "<client/>", "<compass/>", "<consultants/>", "<drafting/>", 
-                "<logo_client/>", "<logo_main/>", "<logo_second/>", "<map/>", 
+                "<logo_client/>", "<logo_main/>", "<logo_sec/>", "<map/>", 
                 "<metadata/>", "<notes/>", "<project/>", "<revision/>", 
                 "<scale/>", "<status/>", "<title/>"
             ])
