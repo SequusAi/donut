@@ -50,6 +50,8 @@ def test(args):
 
         if args.task_name == "rvlcdip":
             gt = ground_truth["gt_parse"]
+            print(gt)
+            print(output)
             score = float(output["class"] == gt["class"])
         elif args.task_name == "docvqa":
             # Note: we evaluated the model on the official website.
